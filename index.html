@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onkeydown="handleKeyPress(event)">
+    <div class="container">
+        <h1 class="calc">Calculator</h1>
+        <div class="calculator">
+            <table>
+                <tr>
+                    <td colspan="4"><div class="ans"></div></td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td colspan="2" onclick="handleButtonClick('Clear')" class="clear">Clear</td>
+                    <td class="operator-button" onclick="deleteLastCharacter()">X</td>
+                </tr>
+                <tr>
+                    <td class="number-button" onclick="handleButtonClick('7')">7</td>
+                    <td class="number-button" onclick="handleButtonClick('8')">8</td>
+                    <td class="number-button" onclick="handleButtonClick('9')">9</td>
+                    <td class="operator-button" onclick="handleButtonClick('*')">*</td>
+                </tr>
+                <tr>
+                    <td class="number-button" onclick="handleButtonClick('4')">4</td>
+                    <td class="number-button" onclick="handleButtonClick('5')">5</td>
+                    <td class="number-button" onclick="handleButtonClick('6')">6</td>
+                    <td class="operator-button" onclick="handleButtonClick('-')">-</td>
+                </tr>
+                <tr>
+                    <td class="number-button" onclick="handleButtonClick('1')">1</td>
+                    <td class="number-button" onclick="handleButtonClick('2')">2</td>
+                    <td class="number-button" onclick="handleButtonClick('3')">3</td>
+                    <td class="operator-button" onclick="handleButtonClick('+')">+</td>
+                </tr>
+                <tr>
+                    <td class="operator-button" onclick="toggleSign()">+/-</td>
+                    <td class="number-button" onclick="handleButtonClick('0')">0</td>
+                    <td class="number-button" onclick="handleButtonClick('.')">.</td>
+                    <td class="operator-button" onclick="handleButtonClick('=')">=</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="log">
+        <h2>Logs</h2>
+        <ul class="log-list"></ul>
+    </div>
+
+    <script src="style.js">
+        
+    </script>
+</body>
+</html>
